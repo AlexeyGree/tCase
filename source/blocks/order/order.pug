@@ -1,0 +1,19 @@
+section.order
+  h2.order__headline LevelUp
+  .order__timer
+  .order__content
+    .order__column
+      .order__image-box
+        img(src='assets/img/prod.png').order__img
+      p.order__price
+        span.order__price-old 10000 $
+        span.order__price-new 5 $
+    .order__column
+      form.order__form.form
+        p.form__paragraph
+          label(for='user-name-field').form__label Ваше имя
+          input(type='text' name='user-name' id='user-name-field').form__input
+        p.form__paragraph
+          label(for='user-phone-field').form__label Ваш телефон
+          input(type='tel' name='user-phone' id='user-phone-field').form__input
+        button(type='submit').form-submit

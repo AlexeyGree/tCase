@@ -1,0 +1,11 @@
+doctype html
+html(lang='ru')
+  include ../components/head
+  body.page
+    include ../components/header
+    main.content
+      block content
+    if dev
+      script(src='assets/js/app.js')
+    else
+      script(src='js/app.min.js')

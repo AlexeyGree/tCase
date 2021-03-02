@@ -1,0 +1,26 @@
+include ul-data
+
+header.header
+  .header__top-line
+    .logo.header__logo
+      a(href='index.html' aria-label='Логотип').logo__link LevelUp 
+        span.logo__link-sp средство для повышения потенции
+    .burger-menu
+      a(href='#' aria-label='Главное меню' data-btn='btn' data-type='burger').burger-menu__link
+        span.burger-menu__line.burger-menu__top-line
+        span.burger-menu__line.burger-menu__middle-line
+        span.burger-menu__line.burger-menu__bottom-line
+  nav.header__bottom-line.navigation
+    ul.navigation__ul
+      +listItem(mainMenuItem.href_1, mainMenuItem.name_1).navigation
+      +listItem(mainMenuItem.href_2, mainMenuItem.name_2).navigation
+      +listItem(mainMenuItem.href_3, mainMenuItem.name_3).navigation
+      +listItem(mainMenuItem.href_4, mainMenuItem.name_4).navigation
+      +listItem(mainMenuItem.href_5, mainMenuItem.name_5).navigation
+  nav.navigation-mobile.nav-mobile-js.close
+    ul.navigation-mobile__ul.main-navigation-mobile.main-mobile-js
+      +listItem(mainMenuItem.href_1, mainMenuItem.name_1).navigation-mobile
+      +listItem(mainMenuItem.href_2, mainMenuItem.name_2).navigation-mobile
+      +listItem(mainMenuItem.href_3, mainMenuItem.name_3).navigation-mobile
+      +listItem(mainMenuItem.href_4, mainMenuItem.name_4).navigation-mobile
+      +listItem(mainMenuItem.href_5, mainMenuItem.name_5).navigation-mobile

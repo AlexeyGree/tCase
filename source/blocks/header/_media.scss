@@ -1,0 +1,99 @@
+@media all and (min-width: 768px) {
+  .header__top-line {
+    max-width: 1024px;
+    height: 100px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .header__logo {
+    position: relative;
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+  .logo__link {
+    text-align: center;
+    line-height: 24px;
+    color: black;
+    transition: color ease-in-out 0.3s;
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+      transition: color ease-in-out 0.3s;
+    }
+  }
+
+  .burger-menu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .header__bottom-line {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    margin: 0;
+    clip-path: none;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+    background-color: #f9f9f9;
+  }
+  .navigation__ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+  }
+
+  .navigation__li {
+    position: relative;
+    box-sizing: border-box;
+
+    &:first-child:hover > .catalog-menu {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity visibiliity ease-in-out 0.6s;
+    }
+  }
+
+  .navigation__a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none; 
+    color: black;
+    box-sizing: border-box;
+
+    &:hover {
+      color: white;
+      background-color: #d63f3f;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+}

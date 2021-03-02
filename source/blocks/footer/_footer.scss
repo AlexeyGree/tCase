@@ -1,0 +1,200 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  background-color: rgb(59, 59, 59);
+}
+.footer__top-line,
+.footer__bottom-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.footer__top-line {
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__bottom-line {
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.footer__column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// === LOGO === //
+.footer__logo {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer__logo-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+// === LOGO === //
+
+// === CALL US === //
+.footer__call-us {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: white;
+}
+// === CALL US === //
+
+// === OUR ADDRESS === //
+.footer__our-address {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: white;
+}
+// === OUR ADDRESS === //
+
+// === OUR MAIL === //
+.footer__our-mail {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: white;
+}
+// === OUR MAIL === //
+
+// === MENU === //
+.footer-menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  list-style-type: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    margin-left: 10%;
+    background-color: white;
+  }
+}
+.footer-menu__a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: white;
+  text-decoration: none;
+}
+// === MENU === //
+
+// === GET PRICE === //
+.get-price {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.get-price__description {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+
+  &:first-child {
+    margin-bottom: 0;
+  }
+}
+.get-price__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.get-price__input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 7px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  border: none;
+  box-sizing: border-box;
+
+  &:focus {
+    outline-color: rgb(59, 59, 59);
+    outline-style: auto;
+    outline-width: 1px;
+  }
+}
+.get-price__btn {
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  // color: rgb(59, 59, 59);
+  color: white;
+  border: none;
+  background-color: #d63f3f;
+  box-sizing: border-box;
+
+  &:focus {
+    outline-color: rgb(59, 59, 59);
+    outline-style: auto;
+    outline-width: 1px;
+  }
+}
+// === GET PRICE === //
+
+// === COPYRIGHT === //
+.footer__copyright {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: white;
+}
+// === COPYRIGHT === //
+
+@import 'media';

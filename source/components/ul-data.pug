@@ -1,0 +1,19 @@
+- var mainMenuItem = {}
+- mainMenuItem.href_1 = '#promo'
+- mainMenuItem.name_1 = 'Промо'
+- mainMenuItem.href_2 = '#composition'
+- mainMenuItem.name_2 = 'Состав'
+- mainMenuItem.href_3 = '#reviews'
+- mainMenuItem.name_3 = 'Отзывы'
+- mainMenuItem.href_4 = '#features'
+- mainMenuItem.name_4 = 'Характеристики'
+- mainMenuItem.href_5 = '#offer'
+- mainMenuItem.name_5 = 'Заказать'
+
+mixin listItem(href, name, submenu, type)
+  li(class!=attributes.class + '__li')
+    if (type)
+      a(class!=attributes.class + '__a' href=href data-btn=submenu data-type=type)= name
+      block
+    else
+      a(class!=attributes.class + '__a' href=href)= name

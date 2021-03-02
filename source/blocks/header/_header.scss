@@ -1,0 +1,144 @@
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__top-line {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+// === LOGO === //
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo__link {
+  // width: 220px;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  color: black;
+}
+.logo__link-sp {
+  display: block;
+}
+// === LOGO === //
+
+// === BURGER-MENU === //
+.burger-menu__link {
+  width: 23px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.burger-menu__line {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  border-radius: 4px;
+}
+// === BURGER-MENU === //
+
+// === NAVIGATION-MOBILE === //
+.navigation-mobile {
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+}
+.navigation-mobile__ul {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  // z-index: 1;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  transition: transform ease-in-out 0.6s;
+}
+
+.navigation-mobile__a {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+
+  &::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -12.5px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+// === animation for mobile menu === //
+.open {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  transition: all ease-in-out 1s;
+}
+.close {
+  transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+// === animation for mobile menu === //
+.header__bottom-line {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+// === NAVIGATION-MOBILE === //
+
+@import 'media';
