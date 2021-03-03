@@ -2,9 +2,10 @@ doctype html
 html(lang='ru')
   include ../components/head
   body.page
-    include ../components/header
+    include ..blocks/promo/promo
     main.content
       block content
+    include ../components/footer
     if dev
       script(src='assets/js/app.js')
     else

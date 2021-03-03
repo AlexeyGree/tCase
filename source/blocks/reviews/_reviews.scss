@@ -1,0 +1,120 @@
+.reviews {
+  position: relative;
+  background: linear-gradient(to left, white, #505050);
+}
+.reviews__headline {
+  margin: 0;
+  margin-bottom: 20px;
+  color: white;
+}
+.reviews__slider-viewbox {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  // overflow: hidden;
+  box-sizing: border-box;
+}
+.reviews__slide {
+  // position: absolute;
+}
+.slide {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+.slide--active {
+  display: flex;
+}
+.slide__user-image {
+  width: 240px;
+  margin-bottom: 20px;
+}
+.slide__user-img {
+  width: 100%;
+  height: auto;
+}
+.slide__user-name {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+}
+.slide__user-review {
+  max-width: 450px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
+}
+.reviews__slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  max-width: 1024px;
+  height: 80px;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // visibility: hidden;
+  // opacity: 0;
+}
+.reviews__slide-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+  }
+}
+.reviews__slide-left {
+  &::before {
+    top: 14px;
+    left: 5px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    bottom: 14px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+}
+.reviews__slide-right {
+  &::before {
+    top: 14px;
+    right: 5px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    bottom: 14px;
+    right: 5px;
+    transform: rotate(-45deg);
+  }
+}
+
+@import 'media';

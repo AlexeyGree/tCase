@@ -1,0 +1,50 @@
+@media all and (min-width: 768px) {
+  .reviews__headline {
+    margin-bottom: 40px;
+  }
+  .slide__user-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .slide__user-review {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .reviews__slide-btn {
+    width: 75px;
+    height: 75px;
+
+    &::before,
+    &::after {
+      width: 40px;
+      height: 3px;
+      border-radius: 10px;
+    }
+  }
+  .reviews__slide-left {
+    &::before {
+      top: 22.5px;
+      left: 10px;
+    }
+    &::after {
+      bottom: 22.5px;
+      left: 10px;
+    }
+  }
+  .reviews__slide-right {
+    &::before {
+      top: 22.5px;
+      right: 10px;
+    }
+    &::after {
+      bottom: 22.5px;
+      right: 10px;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .reviews__headline {
+    margin-bottom: 60px;
+  }
+}

@@ -1,13 +1,13 @@
-section.order
-  h2.order__headline LevelUp
+section.order.section-set
+  h2.order__headline.headline LevelUp
   .order__timer
   .order__content
     .order__column
       .order__image-box
         img(src='assets/img/prod.png').order__img
-      p.order__price
-        span.order__price-old 10000 $
-        span.order__price-new 5 $
+      p.order__price Цена: 
+        span.order__price-old 10000$
+        span.order__price-new 5$
     .order__column
       form.order__form.form
         p.form__paragraph
@@ -16,4 +16,4 @@ section.order
         p.form__paragraph
           label(for='user-phone-field').form__label Ваш телефон
           input(type='tel' name='user-phone' id='user-phone-field').form__input
-        button(type='submit').form-submit
+        button(type='submit').form__submit.btn Отправить

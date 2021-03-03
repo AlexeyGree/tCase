@@ -13,44 +13,10 @@
     <script src="assets/js/app.js"></script>
   </head>
   <body class="page">
-    <header class="header">
-      <div class="header__top-line">
-        <div class="logo header__logo"><a class="logo__link" href="index.html" aria-label="Логотип">LevelUp <span class="logo__link-sp">средство для повышения потенции</span></a></div>
-        <div class="burger-menu"><a class="burger-menu__link" href="#" aria-label="Главное меню" data-btn="btn" data-type="burger"><span class="burger-menu__line burger-menu__top-line"></span><span class="burger-menu__line burger-menu__middle-line"></span><span class="burger-menu__line burger-menu__bottom-line"></span></a></div>
-      </div>
-      <nav class="header__bottom-line navigation">
-        <ul class="navigation__ul">
-              <li class="navigation__li"><a class="navigation__a" href="#promo">Промо</a>
-              </li>
-              <li class="navigation__li"><a class="navigation__a" href="#composition">Состав</a>
-              </li>
-              <li class="navigation__li"><a class="navigation__a" href="#reviews">Отзывы</a>
-              </li>
-              <li class="navigation__li"><a class="navigation__a" href="#features">Характеристики</a>
-              </li>
-              <li class="navigation__li"><a class="navigation__a" href="#offer">Заказать</a>
-              </li>
-        </ul>
-      </nav>
-      <nav class="navigation-mobile nav-mobile-js close">
-        <ul class="navigation-mobile__ul main-navigation-mobile main-mobile-js">
-              <li class="navigation-mobile__li"><a class="navigation-mobile__a" href="#promo">Промо</a>
-              </li>
-              <li class="navigation-mobile__li"><a class="navigation-mobile__a" href="#composition">Состав</a>
-              </li>
-              <li class="navigation-mobile__li"><a class="navigation-mobile__a" href="#reviews">Отзывы</a>
-              </li>
-              <li class="navigation-mobile__li"><a class="navigation-mobile__a" href="#features">Характеристики</a>
-              </li>
-              <li class="navigation-mobile__li"><a class="navigation-mobile__a" href="#offer">Заказать</a>
-              </li>
-        </ul>
-      </nav>
-    </header>
     <main class="content">
-      <section class="promo">
-        <div class="promo__bg"></div>
-        <h1 class="promo__headline">Продукт для повышения потенции “LevelUp”</h1>
+      <header class="promo section-set">
+        <video class="promo__bg" src="assets/img/video.mp4" autoplay loop playsinline muted></video>
+        <h1 class="promo__headline headline">Продукт для повышения потенции <span class="promo__headline-span">“LevelUp”</span></h1>
         <div class="promo__content">
           <div class="promo__image-box"><img class="promo__img" src="assets/img/prod.png"></div>
           <div class="promo__description">
@@ -58,12 +24,12 @@
               <li class="promo__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
               <li class="promo__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
               <li class="promo__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
-            </ul>
+            </ul><a class="promo__btn btn btn--link" href="#">Заказать</a>
           </div>
         </div>
-      </section>
-      <section class="composition">
-        <h2 class="composition__headline">Состав продукта</h2>
+      </header>
+      <section class="composition section-set">
+        <h2 class="composition__headline visually-hidden">Состав продукта</h2>
         <ul class="composition__list">
           <li class="composition__item composition-item">
             <div class="composition-item__img"></div>
@@ -77,8 +43,8 @@
             <div class="composition-item__img"></div>
             <p class="composition-item__description">Элемент</p>
           </li>
-          <li class="composition__item composition-item">
-            <div class="composition-item__medicine-img"></div><span class="composition-item__line composition-line1"></span><span class="composition-item__line composition-line2"></span><span class="composition-item__line composition-line3"></span><span class="composition-item__line composition-line4"></span><span class="composition-item__line composition-line5"></span><span class="composition-item__line composition-line6"></span>
+          <li class="composition__item composition-item composition-item-med">
+            <div class="composition-item__medicine-img"></div><span class="composition-item__line composition-item__line1"></span><span class="composition-item__line composition-item__line2"></span><span class="composition-item__line composition-item__line3"></span><span class="composition-item__line composition-item__line4"></span><span class="composition-item__line composition-item__line5"></span><span class="composition-item__line composition-item__line6"></span>
           </li>
           <li class="composition__item composition-item">
             <div class="composition-item__img"></div>
@@ -92,49 +58,51 @@
             <div class="composition-item__img"></div>
             <p class="composition-item__description">Элемент</p>
           </li>
-        </ul>
+        </ul><a class="composition__btn btn btn--link" href="#">Заказать</a>
       </section>
-      <section class="reviews">
-        <h2 class="reviews__headline">Отзывы</h2>
+      <section class="reviews section-set">
+        <h2 class="reviews__headline headline">Отзывы наших покупателей</h2>
         <div class="reviews__slider-viewbox">
-          <div class="reviews__slider-box">
-            <article class="reviews__slide slide">
-              <div class="slide__user-image"></div>
-              <h3 class="slide__user-name">Пётр Петрович Петров</h3>
-              <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
-            </article>
-            <article class="reviews__slide slide">
-              <div class="slide__user-image"></div>
-              <h3 class="slide__user-name">Пётр Петрович Петров</h3>
-              <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
-            </article>
-            <article class="reviews__slide slide">
-              <div class="slide__user-image"></div>
-              <h3 class="slide__user-name">Пётр Петрович Петров</h3>
-              <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
-            </article>
-          </div>
+          <article class="reviews__slide slide slide--active">
+            <div class="slide__user-image"><img class="slide__user-img" src="assets/img/doctor.png"></div>
+            <h3 class="slide__user-name">Пётр Петрович Петров</h3>
+            <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
+          </article>
+          <article class="reviews__slide slide">
+            <div class="slide__user-image"><img class="slide__user-img" src="assets/img/doctor.png"></div>
+            <h3 class="slide__user-name">Пётр Петрович Петров</h3>
+            <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
+          </article>
+          <article class="reviews__slide slide">
+            <div class="slide__user-image"><img class="slide__user-img" src="assets/img/doctor.png"></div>
+            <h3 class="slide__user-name">Пётр Петрович Петров</h3>
+            <p class="slide__user-review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi. Impedit asperiores repudiandae obcaecati maiores. Temporibus, illum? Mollitia odio quo quos assumenda impedit. Obcaecati debitis repellat esse alias, necessitatibus quaerat!</p>
+          </article>
+        </div>
+        <div class="reviews__slider-controls">
+          <button class="reviews__slide-btn reviews__slide-left" aria-label="К предыдущему отзыву"></button>
+          <button class="reviews__slide-btn reviews__slide-right" aria-label="К следующему отзыву"></button>
         </div>
       </section>
-      <section class="features">
-        <h2 class="features__headline">Характеристики</h2>
+      <section class="features section-set">
+        <h2 class="features__headline visually-hidden">Характеристики</h2>
         <div class="features__content">
           <div class="features__image-box"><img class="features__img" src="assets/img/doctor.png"></div>
-          <p class="features__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis autem placeat iure molestiae quos repudiandae maiores, corporis ipsam odit officia dolore earum dolores quisquam, voluptatem quis assumenda nam iusto quas!</p>
+          <p class="features__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis autem placeat iure molestiae quos repudiandae maiores, corporis ipsam odit officia dolore earum dolores quisquam, voluptatem quis assumenda nam iusto quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis autem placeat iure molestiae quos repudiandae maiores, corporis ipsam odit officia dolore earum dolores quisquam, voluptatem quis assumenda nam iusto quas!</p>
           <ul class="features__list">
             <li class="features__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
             <li class="features__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
             <li class="features__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam iste, quaerat minus quibusdam neque quod expedita inventore tempore praesentium porro nostrum, quia id quos, maxime pariatur quam nesciunt facilis corporis.</li>
           </ul>
-        </div>
+        </div><a class="features__btn btn btn--link" href="#">Заказать</a>
       </section>
-      <section class="order">
-        <h2 class="order__headline">LevelUp</h2>
+      <section class="order section-set">
+        <h2 class="order__headline headline">LevelUp</h2>
         <div class="order__timer"></div>
         <div class="order__content">
           <div class="order__column">
             <div class="order__image-box"><img class="order__img" src="assets/img/prod.png"></div>
-            <p class="order__price"><span class="order__price-old">10000 $</span><span class="order__price-new">5 $</span></p>
+            <p class="order__price">Цена: <span class="order__price-old">10000$</span><span class="order__price-new">5$</span></p>
           </div>
           <div class="order__column">
             <form class="order__form form">
@@ -146,30 +114,14 @@
                 <label class="form__label" for="user-phone-field">Ваш телефон</label>
                 <input class="form__input" type="tel" name="user-phone" id="user-phone-field">
               </p>
-              <button class="form-submit" type="submit"></button>
+              <button class="form__submit btn" type="submit">Отправить</button>
             </form>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__top-line">
-        <div class="footer__column">
-          <div class="logo footer__logo"><a class="logo__link footer__logo-link" href="index.html" aria-label="Логотип">Натяжные  потолки  ремонт  и  строительство</a></div><a class="footer__call-us" href="tel:+79038583142">+7(903) 858-31-42</a>
-          <p class="footer__our-address">г. Борисоглебск ул. Алабышева д. 11</p><a class="footer__our-mail" href="mailto:nik19721@mail.ru">nik19721@mail.ru</a>
-        </div>
-        <div class="footer__column get-price">
-          <p class="get-price__description">Хотите получить электронную версию наших текущих расценок?</p>
-          <p class="get-price__description">Напишите свой email!</p>
-          <form class="get-price__form" action="">
-            <input class="get-price__input" type="text" name="get-price">
-            <button class="get-price__btn" type="submit" name="send-usermail">Отправить email</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer__bottom-line">
-        <p class="footer__copyright">© 2018. Натяжные  потолки  ремонт  и  строительство  Все права защищены.</p>
-      </div>
+      <p class="footer__copyright">© 2021.</p>
     </footer>
     <script src="assets/js/app.js"></script>
   </body>

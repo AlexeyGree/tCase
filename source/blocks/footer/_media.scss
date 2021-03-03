@@ -1,100 +1,16 @@
 @media screen and (min-width: 768px) {
-  .footer__top-line,
-  .footer__bottom-line {
-    max-width: 1024px;
+  .footer__copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 22px;
   }
-  .footer__top-line {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+}
+@media all and (min-width: 1024px) {
+  .footer__copyright {
     padding-top: 30px;
-    padding-right: 30px;
     padding-bottom: 30px;
-    padding-left: 30px;
-  }
-  .footer__column,
-  .get-price {
-    height: 200px;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-  .footer__logo {
-    justify-content: flex-start;
-    // margin-bottom: 80px;
-    margin-bottom: auto;
-  }
-  .footer__logo-link {
-    color: white;
-    padding: 0;
-
-    &:hover {
-      color: lightseagreen;
-    }
-  }
-  .footer__call-us {
-    transition: all ease-in-out 0.6s;
-
-    &:hover {
-      text-decoration: none;
-      color: lightseagreen;
-    }
-  }
-  .footer__our-address {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 18px;
-  }
-  .footer__our-mail {
-    transition: all ease-in-out 0.6s;
-
-    &:hover {
-      text-decoration: none;
-      color: lightseagreen;
-    }
-  }
-
-  .footer-menu {
-    padding: 0;
-    align-items: flex-start;
-
-    &::after {
-      content: none;
-    }
-  }
-  .footer-menu__a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: all ease-in-out 0.6s;
-
-    &:hover {
-      color: lightseagreen;
-    }
-  }
-
-  .get-price__description {
-    text-align: left;
-  }
-  .get-price__input {
-    &:focus {
-      outline-color: #d63f3f;
-      outline-style: auto;
-      outline-width: 1px;
-    }
-  }
-  .get-price__btn {
-    color: white;
-    background-color: #d63f3f;
-    cursor: pointer;
-
+    font-size: 16px;
+    line-height: 22px;
   }
 }

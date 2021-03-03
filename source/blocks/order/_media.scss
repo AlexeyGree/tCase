@@ -1,0 +1,45 @@
+@media all and (min-width: 768px) {
+  .order__headline {
+    margin-bottom: 40px;
+  }
+  .order__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .order__column {
+    width: 45%;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+  .order__image-box {
+    width: 200px;
+
+    &::after {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .order__price {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .order__price-new {
+    font-size: 52px;
+    line-height: 62px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .order__headline {
+    margin-bottom: 60px;
+  }
+  .order__content {
+    max-width: 1024px;
+  }
+  .order__image-box {
+    width: 250px;
+  }
+}

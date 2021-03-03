@@ -1,0 +1,104 @@
+@media all and (min-width: 768px) {
+  .composition__list {
+    height: 700px;
+    justify-content: space-between;
+  }
+  .composition-item {
+    width: 200px;
+    padding-top: 125px;
+  }
+  .composition-item-med {
+    padding-top: 10px;
+    flex-basis: 100%;
+  }
+  .composition-item__medicine-img {
+    top: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: -125px;
+    margin-left: -125px;
+  }
+  .composition-item__line {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background-color: black;
+    border-radius: 3px;
+
+    &1 {
+      top: 170px;
+      left: -40px;
+      transform: rotate(45deg);
+    }
+    &2 {
+      top: 320px;
+      left: -45px;
+    }
+    &3 {
+      top: 470px;
+      left: -40px;
+      transform: rotate(-45deg);
+    }
+    &4 {
+      top: 170px;
+      right: -40px;
+      transform: rotate(-45deg);
+    }
+    &5 {
+      top: 320px;
+      right: -45px;
+    }
+    &6 {
+      top: 470px;
+      right: -40px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .composition__list {
+    max-width: 1024px;
+  }
+  .composition-item-med {
+    width: 330px;
+  }
+  .composition-item__medicine-img {
+    width: 330px;
+    height: 330px;
+    margin-top: -165px;
+    margin-left: -165px;
+  }
+  .composition-item__line {
+    width: 65px;
+
+    &1 {
+      top: 170px;
+      left: -70px;
+      transform: rotate(45deg);
+    }
+    &2 {
+      top: 320px;
+      left: -75px;
+    }
+    &3 {
+      top: 470px;
+      left: -70px;
+      transform: rotate(-45deg);
+    }
+    &4 {
+      top: 170px;
+      right: -70px;
+      transform: rotate(-45deg);
+    }
+    &5 {
+      top: 320px;
+      right: -75px;
+    }
+    &6 {
+      top: 470px;
+      right: -70px;
+      transform: rotate(45deg);
+    }
+  }
+}

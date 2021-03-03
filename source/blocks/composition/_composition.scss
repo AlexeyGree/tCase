@@ -1,0 +1,68 @@
+.composition {
+  justify-content: center;
+  background-color: #ffffff;
+  background-image:  radial-gradient(#7fab67 1.1500000000000001px, transparent 1.1500000000000001px), radial-gradient(#7fab67 1.1500000000000001px, #ffffff 1.1500000000000001px);
+  background-size: 46px 46px;
+  background-position: 0 0,23px 23px;
+}
+.composition__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.composition-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 150px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+.composition-item__img {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  background-color: lightsalmon;
+  border-radius: 50%;
+}
+.composition-item__description {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: black;
+}
+.composition-item-med {
+  position: relative;
+  padding-top: 10px;
+  height: 200px;
+}
+.composition-item__medicine-img {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  background-image: url('../img/prod.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@import 'media';
