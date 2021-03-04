@@ -1,105 +1,96 @@
-// === mobile-nav data === //
-var mainMenu = document.querySelector('.main-mobile-js');
-var navMobile = document.querySelector('.nav-mobile-js');
-
-var burgerState = false;
-var mobileNavSettings = {
-  transform: {
-    main: 'translateX(0)',
-    catalog: 'translateX(-100%)',
-    ceilings: 'translateX(-200%)'
-  },
-  height: {
-    main: '200px',
-    catalog: '680px',
-    ceilings: '365px'
-  }
-}
-// === mobile-nav data === //
-
-// === popup data === //
-var popupSettings = {
-  open: {
-    visibility: 'visible',
-    opacity: '1',
-    transform: 'translateY(0)'
-  },
-  close: {
-    visibility: 'hidden',
-    opacity: '0',
-    transform: 'translateY(-100%)'
-  }
-}
-
-var headerPopup = {
-  block: document.querySelector('.call-order-popup-js'),
-  form: document.querySelector('.call-order-popup__form-js'),
-}
-
-
-// === popup data === //
-
-var btns = document.querySelectorAll("[data-btn='btn']");
-
-var getElement = function(elements, handler) {
-  elements.forEach(handler);
-}
-
-var getBtnSettings = function(element) {
-  switch (element.dataset.type) {
-    case 'main':
-      window.scroll(0, 0);
-      mainMenu.style.transform = mobileNavSettings.transform.main;
-      navMobile.style.height = mobileNavSettings.height.main;
-      break;
-    case 'catalog':
-      window.scroll(0, 0);
-      mainMenu.style.transform = mobileNavSettings.transform.catalog;
-      navMobile.style.height = mobileNavSettings.height.catalog;
-      break;
-    case 'ceilings':
-      window.scroll(0, 0);
-      mainMenu.style.transform = mobileNavSettings.transform.ceilings;
-      navMobile.style.height = mobileNavSettings.height.ceilings;
-      break;
-    case 'burger':
-      if (!burgerState) {
-        burgerState = true;
-        navMobile.classList.remove('close');
-        navMobile.classList.add('open');
-      } else {
-        navMobile.classList.remove('open');
-        navMobile.classList.add('close');
-        window.setTimeout(function() {
-          mainMenu.style.transform = mobileNavSettings.transform.main;
-          navMobile.style.height = mobileNavSettings.height.main;
-          burgerState = false;
-        }, 1000);
-      }
-      break;
-    case 'call-open':
-      headerPopup.block.style.visibility = popupSettings.open.visibility;
-      headerPopup.block.style.opacity = popupSettings.open.opacity;
-      headerPopup.form.style.transform = popupSettings.open.transform;
-      headerPopup.form.style.opacity = popupSettings.open.opacity;
-      break;
-    case 'call-close':
-      headerPopup.block.style.visibility = popupSettings.close.visibility;
-      headerPopup.block.style.opacity = popupSettings.close.opacity;
-      headerPopup.form.style.transform = popupSettings.close.transform;
-      headerPopup.form.style.opacity = popupSettings.close.opacity;
-      break;
-    default:
-      throw 'Незвестная кнопка'
-      break;
-  }
-}
-
 var addClickEvent = function(element) {
+  let orderForm = document.getElementById('order');
   element.addEventListener('click', function(e) {
     e.preventDefault();
-    getBtnSettings(element);
+    orderForm.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
 }
-getElement(btns, addClickEvent);
 
+var getButton = function() {
+  let orderBtns = document.querySelectorAll('.buy-js');
+  orderBtns.forEach(function(item) {
+    addClickEvent(item);
+  });
+}
+
+getButton();
+var getRemainingTime = function(finalDate) {
+  let total = Date.parse(finalDate) - Date.parse(new Date());
+  let seconds = Math.floor((total / 1000) % 60);
+  let minutes = Math.floor((total / 1000 / 60) % 60);
+  let hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  let days = Math.floor(total / (1000 * 60 * 60 * 24));
+  return {
+    'total': total,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+var initClock = function(finalDate) {
+  let days = document.querySelector('.days-js');
+  let hours = document.querySelector('.hours-js');
+  let min = document.querySelector('.minutes-js');
+  let sec = document.querySelector('.seconds-js');
+
+  let updateClock = function() {
+    let total = getRemainingTime(finalDate);
+
+    days.innerHTML = total.days;
+    hours.innerHTML = ('0' + total.hours).slice(-2);
+    min.innerHTML = ('0' + total.minutes).slice(-2);
+    sec.innerHTML = ('0' + total.seconds).slice(-2);
+
+    if(total <= 0) {
+      clearInterval(timeInterval);
+    }
+  }
+
+  updateClock();
+  let timeInterval = setInterval(updateClock, 1000);
+}
+
+var finalDate = new Date(Date.parse(new Date()) + 5 * 24 * 60 * 60 * 1000);
+initClock(finalDate);
+var initSlider = function() {
+  let viewBox = document.querySelector('.viewbox-js');
+  let leftBtn = document.querySelector('.slide-left-js');
+  let rightBtn = document.querySelector('.slide-right-js');
+  
+  leftBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    let activeSlide = document.querySelector('.slide-active-js');
+    activeSlide.classList.remove('slide--active');
+    activeSlide.classList.remove('slide-active-js');
+
+    if(activeSlide.previousElementSibling === null) {
+      console.log(viewBox.lastElementChild);
+      viewBox.lastElementChild.classList.add('slide--active');
+      viewBox.lastElementChild.classList.add('slide-active-js');
+    } else {
+      activeSlide.previousElementSibling.classList.add('slide--active');
+      activeSlide.previousElementSibling.classList.add('slide-active-js');
+    }
+  });
+
+  rightBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    let activeSlide = document.querySelector('.slide-active-js');
+    activeSlide.classList.remove('slide--active');
+    activeSlide.classList.remove('slide-active-js');
+
+    if(activeSlide.nextElementSibling === null) {
+      viewBox.firstElementChild.classList.add('slide--active');
+      viewBox.firstElementChild.classList.add('slide-active-js');
+    } else {
+      activeSlide.nextElementSibling.classList.add('slide--active');
+      activeSlide.nextElementSibling.classList.add('slide-active-js');
+    }
+  });
+}
+initSlider();

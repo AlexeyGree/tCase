@@ -1,10 +1,15 @@
-section.order.section-set
+section.order.section-set#order
   h2.order__headline.headline LevelUp
-  .order__timer
+  p.timer__description Время действия скидки
+  .order__timer.timer.timer-js
+    span.timer__item.days-js
+    span.timer__item.hours-js
+    span.timer__item.minutes-js
+    span.timer__item.seconds-js
   .order__content
     .order__column
       .order__image-box
-        img(src='assets/img/prod.png').order__img
+        img(src='assets/img/prod.png' width='291' height='451' alt='Продукт').order__img
       p.order__price Цена: 
         span.order__price-old 10000$
         span.order__price-new 5$
@@ -12,8 +17,10 @@ section.order.section-set
       form.order__form.form
         p.form__paragraph
           label(for='user-name-field').form__label Ваше имя
-          input(type='text' name='user-name' id='user-name-field').form__input
+          input(type='text' name='user-name' id='user-name-field').form__input.name-js
+          span.tip Анатолий Анатольевич Анатольев
         p.form__paragraph
           label(for='user-phone-field').form__label Ваш телефон
-          input(type='tel' name='user-phone' id='user-phone-field').form__input
+          input(type='tel' name='user-phone' id='user-phone-field' pattern='[7][0-9]{6}[0-9]{2}[0-9]{2}' requered).form__input.phone-js
+          span.tip 79998887766
         button(type='submit').form__submit.btn Отправить

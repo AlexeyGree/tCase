@@ -19,29 +19,38 @@
   // overflow: hidden;
   box-sizing: border-box;
 }
-.reviews__slide {
-  // position: absolute;
-}
 .slide {
+  position: absolute;
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  visibility: hidden;
+  opacity: 0;
   box-sizing: border-box;
 }
 .slide--active {
-  display: flex;
+  // display: flex;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
 }
 .slide__user-image {
   width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .slide__user-img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 .slide__user-name {
   margin-top: 0;

@@ -7,6 +7,19 @@
     justify-content: space-between;
     align-items: stretch;
   }
+  .timer__description {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .timer {
+    max-width: 600px;
+  }
+  .timer__item {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    line-height: 34px;
+  }
   .order__column {
     width: 45%;
 

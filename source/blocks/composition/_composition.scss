@@ -39,6 +39,10 @@
   height: 100px;
   margin-left: -50px;
   background-color: lightsalmon;
+  background-image: url('../img/like.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   border-radius: 50%;
 }
 .composition-item__description {
